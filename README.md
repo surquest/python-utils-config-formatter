@@ -1,3 +1,10 @@
+![GitHub](https://img.shields.io/github/license/surquest/python-utils-config-formatter?style=flat-square)
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/surquest/python-utils-config-formatter/test.yml?branch=main&style=flat-square)
+![Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/surquest/6e25c317000917840152a5e702e71963/raw/python-utils-config-formatter.json&style=flat-square)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/surquest-utils-config-formatter?style=flat-square)
+![PyPI](https://img.shields.io/pypi/v/surquest-utils-config-formatter)
+
+
 # Introduction
 
 The Formatter helps you to follow the naming patterns of resources defined
@@ -65,7 +72,7 @@ as follows:
   country of the tenant, etc.) - independent on the environment
 
 If you want to see more details about the configuration files, please check
-the [config directory]()
+the [config directory](https://github.com/surquest/python-utils-config-formatter/tree/main/config)
 
 ```python
 from surquest.utils.config.formatter import Formatter
