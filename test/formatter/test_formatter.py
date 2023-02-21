@@ -1,3 +1,4 @@
+import pytest
 from surquest.utils.config.formatter import Formatter
 
 
