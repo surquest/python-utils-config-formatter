@@ -62,7 +62,7 @@ class TestFormatter:
             )
         )
 
-        assert "etl--exchange-rates--ingress--prod" == formatter.get(
+        assert "adm--exchange-rates--ingress--prod" == formatter.get(
             pattern="storage.buckets.ingress",
         )
 
