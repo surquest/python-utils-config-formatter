@@ -1,0 +1,22 @@
+{
+  "IAM": {
+    "serviceAccounts": {
+      "runner": "adm--${solution.slug}-${services.IAM.serviceAccounts.runner.code}--${lower(GCP.env)}"
+    }
+  },
+  "storage": {
+    "buckets": {
+      "ingress": "adm--${solution.code}--${services.storage.buckets.ingress.code}--${lower(GCP.env)}"
+    }
+  },
+  "bigquery": {
+    "datasets": {
+      "raw": "adm_${services.bigquery.datasets.raw.code}_raw"
+    }
+  },
+  "workflows": {
+    "subjects": {
+      "currency": "etl--${solution.code}--${project.env}"
+    }
+  }
+}

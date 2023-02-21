@@ -1,0 +1,48 @@
+{
+  "services": {
+    "IAM": {
+      "serviceAccounts": {
+        "runner": {
+          "name": "Runtime SA",
+          "desc": "Service account for processing the ETL",
+          "code": "runner",
+          "roles": [
+            "roles/logging.logWriter",
+            "roles/cloudtrace.agent",
+            "roles/bigquery.jobUser",
+            "roles/iam.serviceAccountUser"
+          ]
+        }
+      }
+    },
+    "storage": {
+      "buckets": {
+        "ingress": {
+          "desc": "ETL Ingress Bucket for data in raw as well as transformed format",
+          "code": "ingress",
+          "lifecycle": {
+            "age": 7,
+            "actionType": "Delete"
+          }
+        }
+      }
+    },
+    "secretManager": {
+      "keyfiles": {
+        "runner": {
+          "code": "runner"
+        }
+      }
+    },
+    "bigquery": {
+      "datasets": {
+        "raw": {
+          "name": "Exchange Rates",
+          "code": "exchange_rates",
+          "desc": "Collection of exchange rates history for currencies USD and EUR",
+          "deletionProtection": false
+        }
+      }
+    }
+  }
+}

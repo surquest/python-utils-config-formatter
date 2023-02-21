@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "surquest-utils-config-formatter"
+version = "0.0.1rc3"
+description = "ConfigFormatter helps you to follow the naming patterns of Google Cloud resources in your Python application."
+authors = [
+    {name= "Michal Švarc", email= "michal.svarc@surquest.com"}
+]
+readme = "README.md"
+dependencies = []
+[project.optional-dependencies]
+test = [
+    "pytest>=7.2.1",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/surquest/python-utils-loader"
+"Bug Tracker" = "https://github.com/surquest/python-utils-loader/issues"
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = ""
+"scripts" = "surquest"
+
+[tool.hatch.build.targets.sdist.sources]
+"src" = ""
+"scripts" = "surquest"
