@@ -4,13 +4,17 @@ build-backend = "hatchling.build"
 
 [project]
 name = "surquest-utils-config-formatter"
-version = "0.0.1rc4"
+version = "0.0.1"
 description = "ConfigFormatter helps you to follow the naming patterns of Google Cloud resources in your Python application."
 authors = [
     {name= "Michal Švarc", email= "michal.svarc@surquest.com"}
 ]
 readme = "README.md"
 dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
 [project.optional-dependencies]
 test = [
     "pytest>=7.2.1",
