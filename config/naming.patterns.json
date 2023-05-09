@@ -9,6 +9,11 @@
       "ingress": "adm--${solution.code}--${services.storage.buckets.ingress.code}--${lower(GCP.env)}"
     }
   },
+  "security": {
+    "secrets": {
+      "apiKey": "ADM_${upper(solution.slug)}_API_KEY_${upper(GCP.env)}"
+    }
+  },
   "bigquery": {
     "datasets": {
       "raw": "adm_${services.bigquery.datasets.raw.code}_raw"
@@ -16,7 +21,7 @@
   },
   "workflows": {
     "subjects": {
-      "currency": "etl--${solution.code}--${project.env}"
+      "currency": "adm--${solution.code}--${project.env}"
     }
   }
 }

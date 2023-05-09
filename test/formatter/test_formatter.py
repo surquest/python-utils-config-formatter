@@ -62,6 +62,10 @@ class TestFormatter:
             )
         )
 
+        assert "ADM_FX_API_KEY_PROD" == formatter.get(
+            pattern="security.secrets.apiKey",
+        )
+
         assert "adm--exchange-rates--ingress--prod" == formatter.get(
             pattern="storage.buckets.ingress",
         )

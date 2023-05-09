@@ -6,6 +6,7 @@ Google Cloud Platform based projects.
 """
 
 import json
+import copy
 import re
 
 
@@ -130,16 +131,18 @@ class Formatter:
         naming_pattern = self._get_config_item(name=pattern)
         naming_pattern = naming_pattern.replace("${", "{")
 
+        config = copy.copy(self.config)
+
         naming_pattern, config = self.change_letter_case(
             naming_pattern=naming_pattern,
-            config=self.config
+            config=config
         )
         naming_pattern, config = self.do_replace(
             naming_pattern=naming_pattern,
             config=config
         )
 
-        return naming_pattern.format(**self.config)
+        return naming_pattern.format(**config)
 
     def _get_config_item(self, name, source="naming_patterns"):
         """Method returns config item by dotted name or list.
